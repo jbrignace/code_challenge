@@ -44,6 +44,8 @@ class contact {
             } else {
                $this->email_sent = false;
             }
+        } else {
+            $this->email_sent = false;
         }
         return $this->email_sent;
         /*
@@ -69,8 +71,9 @@ class contact {
                 ':message' => $message
             ));
             $this->saved_contact = true;
+        } else {
+            $this->saved_contact = false;
         }
-        $this->saved_contact = false;
         return $this->saved_contact;
     }
 }

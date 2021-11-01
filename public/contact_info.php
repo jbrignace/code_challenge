@@ -33,7 +33,7 @@ class contact {
     }
     public function send_email($name, $email, $phone, $message){
         if($this->email_check && $this->name_check && $this->message_check){
-            $to = 'jaredbrigance@gmail.com';
+            $to = 'guy-smiley@example.com';
             $email_subject = "Website Contact Form:  $name";
             $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
             $headers = "From: noreply@yourdomain.com\n";

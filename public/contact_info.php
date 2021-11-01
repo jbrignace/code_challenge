@@ -57,11 +57,13 @@ class contact {
     }
     public function save_contact($name, $email, $phone, $message){
         if($this->email_check && $this->name_check && $this->message_check) {
+            //don't have a database connection to add here.  If I had a database connection set up I would have it added so it would add
+            //the information into the database properly
             //$db = new PDO(...);
             //DataMapper::init($db);
-            $st = self::$db->prepare("insert into contacts set full_name = :name, email = :email, phone = :phone,message = :message");
+            $st = self::$db->prepare("insert into contacts set name = :name, email = :email, phone = :phone,message = :message");
             $st->execute(array(
-                ':full_name' => $name,
+                ':name' => $name,
                 ':email' => $email,
                 ':phone' => $phone,
                 ':message' => $message

@@ -25,6 +25,18 @@ final class test_contact_info extends TestCase {
         $this->assertTrue(true, $result);
 
     }
+    public function test_send_email(){
+        $result = $this->contact->send_email('jared brigance', 'jaredbrigance@gmail.com', '479-637-6429', 'just a simple test to make sure it is working');
+        $this->assertTrue(true, $result);
+
+
+    }
+    public function test_save_contact(){
+        $result = $this->contact->save_contact('jared brigance', 'jaredbrigance@gmail.com', '479-637-6429', 'just a simple test to make sure it is working');
+        $this->assertTrue(true, $result);
+
+
+    }
 }
 
 
